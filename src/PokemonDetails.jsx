@@ -22,11 +22,11 @@ const PokemonDetails = () => {
   if (isError) return <p>Something went wrong!</p>;
 
   return (
-    <div>
-      <h1>{data.name}</h1>
-      <img src={data.sprites.front_default} alt={data.name} />
-      <p>Height: {data.height}</p>
-      <p>Weight: {data.weight}</p>
+    <div className='w-100 h-100 flex flex-col container mx-auto items-center justify-center mt-20 shadow-lg rounded-lg border-gray-50 border '>
+      <h1 className='text-2xl font-bold'>{data.name}</h1>
+      <img src={data.sprites.front_default} alt={data.name} className='w-40' />
+      <p className='mt-5 text-gray-500'>Height: {data.height}</p>
+      <p className='text-gray-500'>Weight: {data.weight}</p>
     </div>
   );
 };
